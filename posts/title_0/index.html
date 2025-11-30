@@ -9,7 +9,7 @@
 <meta property="og:url" content="https://example.org/posts/title_0/">
   <meta property="og:site_name" content="γραφόμενα κασίγνετου">
   <meta property="og:title" content="Title_0">
-  <meta property="og:description" content="这是一篇新文章。">
+  <meta property="og:description" content="这是一篇新文章。我正在尝试用typst写作。 由于CJK字体尚未配置好，现在的typst文档显示是不正常的。 等哪天想改了再改吧。反正md也能用（x 还是比较喜欢铅字风格的字体，但似乎这类开源字体很少。">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -34,80 +34,160 @@
   
   <main>
     
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">Title_0</h1>
-    <div class="post-meta">
-      <time datetime="2025-11-30">
-        2025年11月30日
-      </time>
+  <div class="container pt-5">
+    <div class="row mt-5 pt-5">
       
+  <nav aria-label="breadcrumb" class="small navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleMenu" aria-controls="collapsibleMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse mt-3 mt-md-0" id="collapsibleMenu">
+      <ol class="breadcrumb fw-bold">
+    <li class="breadcrumb-item my-1 my-md-0 ms-3 ms-md-0">
+      <a href="/"
+        
+      >home</a>
+      
+    </li>
+    <li class="breadcrumb-item my-1 my-md-0 ms-3 ms-md-0">
+      <a href="/about"
+        
+      >about</a>
+      
+    </li>
+    <li class="breadcrumb-item my-1 my-md-0 ms-3 ms-md-0">
+      <a href="/posts"
+        class="text-decoration-underline link-offset-3"
+        
+      >posts</a>
+      
+    </li>
+    <li class="breadcrumb-item my-1 my-md-0 ms-3 ms-md-0">
+      <a href="/tags"
+        
+      >tags</a>
+      
+    </li>
+    <li class="breadcrumb-item my-1 my-md-0 ms-3 ms-md-0">
+      <a href="https://github.com/kasignetos"
+        
+          target="_blank" rel="noopener noreferrer"
+        
+      >github</a>
+      
+    </li>
+      </ol>
     </div>
-  </header>
+  </nav>
 
-  
-  <div class="functional-area">
-    <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-  </body>
-</html>
-
-    <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-  </body>
-</html>
-
-    
-  </div>
-
-  
-  <div class="content-area">
-    
+    </div>
+    <div class="post">
+      <header class="mb-4">
+        <h1 class="text-uppercase">Title_0</h1>
+        
+        
+        <div aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item small">
+              
+              <time datetime="2025-11-30T16:08:24&#43;08:00">November 30, 2025</time>
+            </li>
+            
+            
+            <li class="breadcrumb-item small">
+              1 minutes
+            </li>
+          </ol>
+        </div>
+      </header>
       
-      <div class="markdown-content">
-        <p>这是一篇新文章。</p>
 
-      </div>
+      <div class="article">
+        <div class="markdown-content">
+          <p>这是一篇新文章。我正在尝试用typst写作。
+由于CJK字体尚未配置好，现在的typst文档显示是不正常的。
+等哪天想改了再改吧。反正md也能用（x
+还是比较喜欢铅字风格的字体，但似乎这类开源字体很少。</p>
+
+        </div>
+
+        
+          
+          
+
+          
+
+
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/@myriaddreamin/typst.ts/dist/esm/contrib/all-in-one-lite.bundle.js"
+  id="typstTs"
+></script>
+
+
+<div id="typst-content-container"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
     
-  </div>
+    $typst.setCompilerInitOptions({
+        getModule: () => 'https:\/\/example.org\/typst\/typst_ts_web_compiler_bg.wasm'
+    });
 
-  
-  <footer class="post-footer">
-    <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-  </body>
-</html>
+    
+    $typst.setRendererInitOptions({
+        getModule: () => 'https:\/\/example.org\/typst\/typst_ts_renderer_bg.wasm'
+    });
+
+    
+    window.renderTypstFile = async function(containerId, typFilePath) {
+        const container = document.getElementById(containerId);
+        if (!container) {
+            console.error(`容器 #${containerId} 未找到.`);
+            return;
+        }
+        container.innerHTML = '<div>正在加载...</div>';
+
+        try {
+            const response = await fetch(typFilePath);
+            if (!response.ok) throw new Error(`无法加载资源: ${response.status}`);
+            const typstCode = await response.text();
+
+            
+            const svgHtml = await $typst.svg({
+                mainContent: typstCode,
+            });
+            container.innerHTML = svgHtml;
+            console.log('渲染完成。');
+        } catch (error) {
+            console.error('渲染失败:', error);
+            container.innerHTML = `<div style="color: red;">渲染出错: ${error.message}</div>`;
+        }
+    };
+
+    
+    
+    
+        window.renderTypstFile('typst-content-container', "https:\/\/example.org\/posts\/title_0\/main.typ");
+    
+});
+</script>
+
+        
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container mt-4 pb-1">
+    <p class="small opacity-75">
+        free share - kasignetos.github.io
+        
+        // powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/imgios/not-much">imgios/not-much</a>
+        
+    </p>
+</div>
 
   </footer>
-</article>
-
-
-
-<script src="/js/typst-loader.js" defer></script>
 
   </main>
 

@@ -14,7 +14,7 @@
       <link>https://example.org/posts/title_0/</link>
       <pubDate>Sun, 30 Nov 2025 16:08:24 +0800</pubDate>
       <guid>https://example.org/posts/title_0/</guid>
-      <description>&lt;p&gt;这是一篇新文章。&lt;/p&gt;</description>
+      <description>&lt;p&gt;这是一篇新文章。我正在尝试用typst写作。&#xA;由于CJK字体尚未配置好，现在的typst文档显示是不正常的。&#xA;等哪天想改了再改吧。反正md也能用（x&#xA;还是比较喜欢铅字风格的字体，但似乎这类开源字体很少。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
