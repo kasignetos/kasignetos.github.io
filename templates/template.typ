@@ -1,6 +1,4 @@
-#set page(height: auto)
-
-// 自用
+// 自用函数
 #let skew(angle, vscale: 1, body) = {
   let (a, b, c, d) = (1, vscale * calc.tan(angle), 0, vscale)
   let E = (a + d) / 2
@@ -122,23 +120,33 @@
   ]
 ]
 
-// 字体渲染
-#set text(
-  font: (
-    "Huiwen mincho",
-    "Gentium"
+// 页面规则
+#let theme(body) = {
+  set page(
+    height: auto,
+    fill: none,
+    margin: (x: 0pt, y: 0.5em)
   )
-)
 
-#show raw: set text(
-  font: "Google Sans Code"
-)
+  set text(
+    font: (
+      "Huiwen-mincho",
+      "Gentium"
+    ),
+    size: 8pt
+  )
 
-#show math.equation: set text(
-  font: "Libertinus Math"
-)
+  show raw: set text(
+    font: "Google Sans Code"
+  )
 
-#show math.text: set text(
-  font: "Libertinus Math"
-)
+  show math.equation: set text(
+    font: "Libertinus Math"
+  )
 
+  show math.text: set text(
+    font: "Libertinus Math"
+  )
+
+  body
+}
