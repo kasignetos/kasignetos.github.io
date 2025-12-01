@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on γραφόμενα κασίγνετου</title>
-    <link>https://example.org/about/</link>
+    <link>https://kasignetos.github.io/about/</link>
     <description>Recent content in About on γραφόμενα κασίγνετου</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>free share - kasignetos.github.io</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://example.org/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kasignetos.github.io/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

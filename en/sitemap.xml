@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/en/categories/</loc>
+    <loc>https://kasignetos.github.io/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://example.org/categories/"
+                href="https://kasignetos.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="la"
-                href="https://example.org/la/categories/"
+                href="https://kasignetos.github.io/la/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.org/en/categories/"
+                href="https://kasignetos.github.io/en/categories/"
                 />
   </url><url>
-    <loc>https://example.org/en/tags/</loc>
+    <loc>https://kasignetos.github.io/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://example.org/tags/"
+                href="https://kasignetos.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="la"
-                href="https://example.org/la/tags/"
+                href="https://kasignetos.github.io/la/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.org/en/tags/"
+                href="https://kasignetos.github.io/en/tags/"
                 />
   </url><url>
-    <loc>https://example.org/en/</loc>
+    <loc>https://kasignetos.github.io/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://example.org/"
+                href="https://kasignetos.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="la"
-                href="https://example.org/la/"
+                href="https://kasignetos.github.io/la/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.org/en/"
+                href="https://kasignetos.github.io/en/"
                 />
   </url>
 </urlset>
