@@ -125,7 +125,7 @@
   set page(
     height: auto,
     fill: none,
-    margin: (x: 0pt, y: 0.5em)
+    margin: (x: 0.5em, y: 0.5em)
   )
 
   set text(

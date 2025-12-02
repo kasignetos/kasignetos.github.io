@@ -14,7 +14,7 @@
       <link>https://kasignetos.github.io/posts/title_0/</link>
       <pubDate>Sun, 30 Nov 2025 16:08:24 +0800</pubDate>
       <guid>https://kasignetos.github.io/posts/title_0/</guid>
-      <description>&lt;p&gt;这是一篇新文章。我正在尝试用typst写作。&#xA;由于CJK字体尚未配置好，现在的typst文档显示是不正常的。&#xA;等哪天想改了再改吧。反正md也能用（x&#xA;还是比较喜欢铅字风格的字体，但似乎这类开源字体很少。&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;first-commit&#34;&gt;First Commit&lt;/h1&gt;&#xA;&lt;p&gt;Hello! 从今天开始也尝试着写博客了。非常感谢友人给了我继续写作的动机，也希望能借此找回一些活着的实感。&lt;/p&gt;&#xA;&lt;h2 id=&#34;会写些什么&#34;&gt;会写些什么？&lt;/h2&gt;&#xA;&lt;p&gt;一点点计算机，一点点神经科学，一点点语言学。&lt;del&gt;试着改正自己不喜欢做笔记的坏习惯，所以会有点啰唆。&lt;/del&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
