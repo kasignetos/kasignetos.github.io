@@ -117,8 +117,98 @@
           
           
           
+
+<div id="typst-content-container"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    
+    window.renderTypstFile = async function(containerId, typFilePath) {
+        const container = document.getElementById(containerId);
+        if (!container) {
+            console.error(`容器 #${containerId} 未找到.`);
+            return;
+        }
+
+        container.innerHTML = '<div class="typst-loading">正在渲染 Typst 文档...</div>';
+
+        var currentTheme = document.querySelector('.dark');
+        if (currentTheme === null) {
+            currentTheme = document.querySelector('body');
+        }
+        const fontColor = getComputedStyle(currentTheme)
+                            .getPropertyValue('--font-color')
+                            .trim();
+
+        const response = await fetch(typFilePath);
+        if (!response.ok) {
+            throw new Error(`无法加载文件: ${response.status} ${response.statusText}`);
+        }
+        const origSVG = await response.text();
+
+        
+        function SVGFill(svgString, transformFunc) {
+            
+            const parser = new DOMParser();
+            const svgDoc = parser.parseFromString(svgString, 'image/svg+xml');
+
+            
+            const parserError = svgDoc.querySelector('parsererror');
+            if (parserError) {
+                console.error('SVG解析错误:', parserError.textContent);
+                return null;
+            }
+
+            
+            const svgRoot = svgDoc.documentElement;
+
+            
+            
+            const targetGroups = svgRoot.querySelectorAll('g[class*="typst-text"]');
+
+            
+            targetGroups.forEach(group => {
+                
+                const useElements = group.querySelectorAll('use');
+
+                
+                useElements.forEach(useElem => {
+                    const originalFill = useElem.getAttribute('fill');
+                    if (originalFill) {
+                        const newFill = transformFunc(originalFill);
+                        useElem.setAttribute('fill', newFill);
+                        
+                    }
+                });
+            });
+
+            
+            return svgRoot;
+        }
+
+        
+        function colorMap(color) {
+            return fontColor;
+        }
+
+        
+        const newSVG = SVGFill(origSVG, colorMap);
+        container.innerHTML = '';
+        container.appendChild(newSVG);
+    };
+
+    
+    
+    
+        
+        window.renderTypstFile('typst-content-container', "https:\/\/kasignetos.github.io\/posts\/title_0\/main.typ.svg");
+    
+});
+</script>
+
           
-          <img src="https://kasignetos.github.io/posts/title_0/main.typ.svg">
+          
         
       </div>
     </div>
