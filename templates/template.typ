@@ -43,7 +43,7 @@
 }
 
 #let closure(
-  theme-color: blue,
+  theme-color: rgb("555500"),
   size: 12pt,
   lang: "zh",
   region: "cn",
@@ -119,6 +119,8 @@
     #fake-italic()[*#content*]
   ]
 ]
+
+#import "codelst.typ": sourcecode
 
 // 页面规则
 #let theme(body) = {

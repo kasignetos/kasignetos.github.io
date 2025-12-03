@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>free share - kasignetos.github.io</copyright>
-    <lastBuildDate>Sun, 30 Nov 2025 16:08:24 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 03 Dec 2025 16:43:56 +0800</lastBuildDate>
     <atom:link href="https://kasignetos.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的第一个现代 C&#43;&#43; 实践</title>
+      <link>https://kasignetos.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%8E%B0%E4%BB%A3-c&#43;&#43;-%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Wed, 03 Dec 2025 16:43:56 +0800</pubDate>
+      <guid>https://kasignetos.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%8E%B0%E4%BB%A3-c&#43;&#43;-%E5%AE%9E%E8%B7%B5/</guid>
+      <description>&lt;p&gt;如题。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Title_0</title>
       <link>https://kasignetos.github.io/posts/title_0/</link>
