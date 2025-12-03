@@ -120,8 +120,11 @@
   syntaxes: (),
   theme: none,
 
+  font: "Google Sans Code",
+
   code
 ) = {
+  show raw: set text(font: font)
   if code.func() != raw {
     code = code.children.find((c) => c.func() == raw)
   }

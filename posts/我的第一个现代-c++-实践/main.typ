@@ -1,5 +1,4 @@
 #import "../../../static/templates/template.typ": *
-#import "@preview/codelst:2.0.2": sourcecode
 #show: theme
 
 #sourcecode(lang: "cpp")[```
